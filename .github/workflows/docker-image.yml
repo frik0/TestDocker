@@ -21,10 +21,10 @@ jobs:
     - name: Run Trivy vulnerability scanner in repo mode
       uses: aquasecurity/trivy-action@master
       with:
-        scan-type: 'fs'
+        scan-type: 'image'
         ignore-unfixed: true
         format: 'table'#'sarif'
-        output: 'trivy-results.sarif'
+        #output: 'trivy-results.sarif'
         severity: 'MEDIUM,HIGH,CRITICAL'
 
     #- name: Upload Trivy scan results to GitHub Security tab
