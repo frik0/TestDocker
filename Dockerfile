@@ -1,2 +1,2 @@
-FROM alpine:3.12
+FROM ubuntu:14.04
 COPY . /home/frik0/code/TestDocker/html
