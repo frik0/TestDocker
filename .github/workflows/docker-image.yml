@@ -14,13 +14,20 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    
+    - name: Docker Login
+      run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+    
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)   
+      run: docker build . --file Dockerfile --tag frik0/test:1.0   
+    
+    - name: Push
+      run: docker push frik0/test:1.0
       
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
-        image-ref: my-image-name:$(date +%s)
+        image-ref: frik0/test:!.0
         format: 'table'#'sarif'
         #output: 'trivy-results.sarif'
 
