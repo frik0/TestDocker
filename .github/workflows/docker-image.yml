@@ -30,7 +30,7 @@ jobs:
         image-ref: frik0/test:1.0
         format: 'sarif'
         severity: HIGH,CRITICAL
-        exit-code: 1
+        #exit-code: 1
 
     - name: Upload Trivy scan results to GitHub Security tab
       uses: github/codeql-action/upload-sarif@v1
