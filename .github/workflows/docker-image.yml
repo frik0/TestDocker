@@ -28,7 +28,7 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: frik0/test:1.0
-        format: 'json'
+        format: 'sarif'
         severity: HIGH,CRITICAL
         #exit-code: 1
 
