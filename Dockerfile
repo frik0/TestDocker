@@ -1,2 +1,2 @@
-FROM alpine:3.14.3
+FROM alfg/nginx-rtmp
 COPY . /home/frik0/code/TestDocker/html
