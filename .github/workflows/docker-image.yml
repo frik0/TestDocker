@@ -45,5 +45,5 @@ jobs:
           jira_user: '${{ secrets.JIRA_USER }}'
           jira_token: '${{ secrets.JIRA_TOKEN }}'
           jira_project: 'PRUEB'
-          jira_issue_type: 'security'
+          jira_issue_type: 'bug'
           sync_direction: 'gh2jira'
