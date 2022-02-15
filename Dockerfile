@@ -1,2 +1,2 @@
-FROM nginx:1.17.0-perl
+FROM alpine:3.14.3
 COPY . /home/frik0/code/TestDocker/html
