@@ -38,3 +38,11 @@ jobs:
       with:
         sarif_file: 'trivy-results.sarif'
 
+    - name: Sync alerts to Jira issues
+      uses: github/ghas-jira-integration@v1
+      with:
+          jira_url: 'https://frik01.atlassian.net'
+          jira_user: '${{ secrets.JIRA_USER }}'
+          jira_token: '${{ secrets.JIRA_TOKEN }}'
+          jira_project: 'PRUEB'
+          sync_direction: 'gh2jira'
