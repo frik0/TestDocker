@@ -49,5 +49,5 @@ jobs:
           sync_direction: 'gh2jira'
           
     - name: Exit if vuln were found
-      run: cat trivy-results.sarif  | grep CVE > test.txt && exit 1 || exit 0 
+      run: exit 1 #cat trivy-results.sarif  | grep CVE > test.txt && exit 1 || exit 0 
 
