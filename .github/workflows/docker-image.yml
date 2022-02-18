@@ -47,3 +47,7 @@ jobs:
           jira_project: 'PRUEB'
           jira_issue_type: 'bug'
           sync_direction: 'gh2jira'
+          
+    - name: Exit if vuln were found
+      run: cat trivy-results.sarif  | grep CVE > test.txt && exit 1 || exit 0 
+
