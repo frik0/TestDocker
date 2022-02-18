@@ -50,4 +50,4 @@ jobs:
           
     - name: Exit if vuln were found
       #run: cat trivy-results.sarif  | grep -q CVE && exit 0 || exit 1
-      run: cat trivy-results.sarif  | grep -q CVE
+      run:  ! grep -P "CVE" trivy-results.sarif  
