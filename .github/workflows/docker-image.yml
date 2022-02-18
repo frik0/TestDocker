@@ -28,9 +28,10 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: frik0/test:1.0
-        format: 'sarif'
+        #format: 'sarif'
+        format: "table"
         severity: HIGH,CRITICAL
-        output: 'trivy-results.sarif'
+        #output: 'trivy-results.sarif'
         #exit-code: 1
 
     - name: Upload Trivy scan results to GitHub Security tab
