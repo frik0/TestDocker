@@ -32,6 +32,11 @@ jobs:
         severity: HIGH,CRITICAL
         output: 'trivy-results.sarif'
         #exit-code: 1
+        
+    - name: Run Dockle Image Linter 
+      uses: hands-lab/dockle-action@v1
+      with:
+          image: hello-world
 
     - name: Upload Trivy scan results to GitHub Security tab
       uses: github/codeql-action/upload-sarif@v1
