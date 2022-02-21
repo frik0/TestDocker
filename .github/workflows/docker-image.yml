@@ -42,7 +42,7 @@ jobs:
       with:
         image:  frik0/test:1.0
         report-format: sarif
-        report-name: dockle-results.sarif
+        report-name: 'dockle-results.sarif'
         failure-threshold: FATAL
         
     - name: Upload Trivy scan results to GitHub Security tab
