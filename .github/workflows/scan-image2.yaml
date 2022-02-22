@@ -30,8 +30,13 @@ jobs:
       uses: Azure/container-scan@v0.1
       with:
         image-name: frik0/test:1.0
-  
-
+        
+    - name: test
+      run: echo ${{ steps.scan.outputs.scan-report-path }}
+      
+    - name: test2
+      run: cat ${{ steps.scan.outputs.scan-report-path }}
+    
     - name: Convert Container Scan Report to SARIF
       id: scan-to-sarif
       uses: rm3l/container-scan-to-sarif-action@v1
