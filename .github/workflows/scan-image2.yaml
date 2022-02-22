@@ -39,13 +39,11 @@ jobs:
     
     - name: Convert Container Scan Report to SARIF
       id: scan-to-sarif
-      uses: rm3l/container-scan-to-sarif-action@v1
+      uses: rm3l/container-scan-to-sarif-action@v1.5.0
       if: ${{ always() }}
       with:
-        input-file: scanreport.json
+        input-file:  ${{ steps.scan.outputs.scan-report-path }}
 
-    - name: test3
-      run: cat ${{ steps.scan.outputs.scan-report-path }}
       
     - name: Upload SARIF reports to GitHub Security tab
       uses: github/codeql-action/upload-sarif@v1
