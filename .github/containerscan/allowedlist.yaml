@@ -1,0 +1,6 @@
+general:
+  vulnerabilities:
+    - CVE-2021-42383
+ 
+  bestPracticeViolations:
+    - DKL-DI-0004
