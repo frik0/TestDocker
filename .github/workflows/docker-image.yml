@@ -35,7 +35,7 @@ jobs:
         severity: HIGH,CRITICAL
         output: 'trivy-results.sarif'
         #ignore-policy: ${{github.workspace}}/.github/allowedlist.rego
-        ignore-policy: ./.github/allowedlist.rego
+        ignore-policy: ./.github/allowedlist.rego 
        
     
     - name: Run Dockle Image Linter 
