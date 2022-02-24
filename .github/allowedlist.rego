@@ -1,6 +1,6 @@
 package trivy
 
-default ignore = false
+default ignore = true
 
 ignore {
 	input.VulnerabilityID == "CVE-2021-36159"
