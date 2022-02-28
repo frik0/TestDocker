@@ -23,10 +23,7 @@ jobs:
     
     - name: Push
       run: docker push frik0/test:1.0
-      
-    - name: test
-      run: cat ${{github.workspace}}/.github/allowedlist.rego
-      
+    
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
