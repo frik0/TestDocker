@@ -64,4 +64,4 @@ jobs:
           
     - name: Exit if vuln were found
       run: cat trivy-results.sarif  | grep -q CVE && exit 1 || exit 0
-      
+       
