@@ -31,10 +31,9 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         image-ref: frik0/test:1.0
-        #format: 'sarif'
-        #severity: HIGH,CRITICAL
-        #output: 'trivy-results.sarif'
-        #ignore-policy: ${{github.workspace}}/.github/allowedlist.rego
+        format: 'sarif'
+        severity: HIGH,CRITICAL
+        output: 'trivy-results.sarif'
         ignore-policy: ./.github/allowedlist.rego 
        
     
